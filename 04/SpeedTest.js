@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import useRandomItem from './hook';
 
-const SpeedTest = () => {
+function SpeedTest() {
     const [word, regenerateWord] = useRandomItem(['devmentor.pl', 'abc', 'JavaScript']);
 
     useEffect(() => {
@@ -14,6 +14,6 @@ const SpeedTest = () => {
             <input />
         </div>
     );
-};
+}
 
 export default SpeedTest;

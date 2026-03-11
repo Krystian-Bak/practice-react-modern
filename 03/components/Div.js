@@ -1,7 +1,7 @@
 // ./src/components/Div.js
 import React from 'react';
 
-const Div = () => {
+function Div() {
     return (
         <div>
             <h1>??</h1>
@@ -14,6 +14,6 @@ const Div = () => {
             </p>
         </div>
     );
-};
+}
 
 export default Div;

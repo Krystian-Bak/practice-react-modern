@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Div = props => {
+function Div(props) {
     const { title } = props;
 
     return (
@@ -17,7 +17,7 @@ const Div = props => {
             </p>
         </div>
     );
-};
+}
 
 Div.propTypes = {
     title: PropTypes.string.isRequired,
