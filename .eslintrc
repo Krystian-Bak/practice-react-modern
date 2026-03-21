@@ -1,17 +1,36 @@
 {
- "parser": "@babel/eslint-parser",
- "extends": ["airbnb", "prettier"],
- "rules": {
- "react/jsx-filename-extension": [1, {
- "extensions": [".js"]
- }],
- "indent": ["error", 4],
- "react/jsx-indent": ["error", 4],
- "react/jsx-indent-props": ["error", 4],
- "func-names": ["error", "as-needed"]
- },
- "globals": {
- "window": true,
- "document": true
- }
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+        "requireConfigFile": false,
+        "babelOptions": {
+            "presets": ["@babel/preset-env", "@babel/preset-react"]
+        },
+        "ecmaVersion": 2022,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "extends": ["airbnb", "prettier"],
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "rules": {
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [".js"]
+            }
+        ],
+        "indent": ["error", 4],
+        "react/jsx-indent": ["error", 4],
+        "react/jsx-indent-props": ["error", 4],
+        "func-names": ["error", "as-needed"]
+    },
+    "globals": {
+        "window": true,
+        "document": true
+    }
 }

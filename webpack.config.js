@@ -1,4 +1,4 @@
-const taskNumber = '01';
+const taskNumber = '05';
 // numer przerabianego zadania
 
 const path = require('path');
@@ -14,7 +14,7 @@ module.exports = {
         path: path.resolve(__dirname, 'build'),
         // definiuje ścieżką wyjściową
         filename: 'app.min.js',
-    // definiuję nazwę pliku wyjściowego
+        // definiuję nazwę pliku wyjściowego
     },
     module: {
         rules: [
@@ -29,7 +29,7 @@ module.exports = {
                 // mają być wykorzystywane
             },
         ],
-    // obecnie brak dodatkowych ustawień
+        // obecnie brak dodatkowych ustawień
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -41,19 +41,3 @@ module.exports = {
     ],
 };
 // eksportuję ustawienia dla webpack-a
-
-// ...
-const ESLintPlugin = require('eslint-webpack-plugin');
-// importuję odpowiedni plugin
-module.exports = {
-    // ...
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: './src/index.html',
-            // wskazuję plik źródłowy
-            filename: 'index.html',
-            // określam nazwę dla pliku
-        }),
-        new ESLintPlugin(),
-    ],
-};
